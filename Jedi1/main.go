@@ -11,9 +11,14 @@ var d = 42
 var e = "James Bond"
 var f = true
 
+type myType int
+var g myType
+var h int
+
 func main() {
-	fmt.Printf("Exercise 1")
+
 	// Local scope
+	fmt.Printf("Exercise 1")
 	x, y, z := 42, "James Bond", true
 	fmt.Printf("x => %v, y => %v, z => %v\n", x, y, z)
 	fmt.Printf("x => %d\n", x)
@@ -28,4 +33,14 @@ func main() {
 	fmt.Printf("\n\nExercise 3\n")
 	s := fmt.Sprintf("%d %q %t", d, e, f)
 	fmt.Printf("%v\n", s)
+
+	fmt.Printf("\n\nExercise 4\n")
+	fmt.Printf("Value => %d; Type: %T\n", g, g)
+	g = 42
+	fmt.Printf("Value => %d\n", g)
+	
+	fmt.Printf("\n\nExercise 5\n")
+	//h =  g <- error
+	h =  int(g)
+	fmt.Printf("Value => %d\n", h)
 }
